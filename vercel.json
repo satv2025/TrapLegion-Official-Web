@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    {"source": "^/artist=([^/]+)$", "destination": "/artist.html"},
+    {"source": "/artist", "destination": "/artist.html"},
+    {"source": "/artistas", "destination": "/artistas.html"},
+    {"source": "/lanzamientos", "destination": "/lanzamientos.html"},
+    {"source": "/historia", "destination": "/historia.html"},
+    {"source": "/novedades", "destination": "/novedades.html"},
+    {"source": "^/novedad=([^/]+)$", "destination": "/noticia.html"},
+    {"source": "/noticia", "destination": "/noticia.html"}
+  ],
+  "headers": [{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}]}]
+}
